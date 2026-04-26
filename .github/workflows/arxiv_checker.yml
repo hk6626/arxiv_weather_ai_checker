@@ -1,0 +1,33 @@
+name: ArXiv Checker
+
+on:
+  schedule:
+    # 毎日UTCの5:00 (日本時間 14:00) に実行(Arxiv自体は通常、13時ごろ更新)
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+    # 手動実行用
+
+jobs:
+  check-arxiv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run ArXiv Checker
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python main.py

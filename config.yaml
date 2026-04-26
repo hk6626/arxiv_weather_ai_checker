@@ -1,0 +1,15 @@
+arxiv_category: "physics.ao-ph"
+
+search_themes:
+  - "AI気象モデル (AI weather models)"
+  - "AI気象予測 (AI weather prediction)"
+  - "機械学習による気象予測モデル (ML-based Weather Forecasting Models)"
+  - "機械学習による気象モデル (ML-based Weather Models)"
+  - "データ同化 (data assimilation)"
+
+# GitHub Issueを投稿するリポジトリ (例: "username/repo_name")
+# ※ リポジトリを作成後、ここに書き換えてください。
+github_repo: "hk6626/AI_wpmodels_arxiv"
+
+# 利用するGeminiモデル
+gemini_model: "gemini-3.1-flash-lite-preview"
