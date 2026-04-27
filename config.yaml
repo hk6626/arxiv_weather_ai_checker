@@ -9,7 +9,7 @@ search_themes:
 
 # GitHub Issueを投稿するリポジトリ (例: "username/repo_name")
 # ※ リポジトリを作成後、ここに書き換えてください。
-github_repo: "hk6626/AI_wpmodels_arxiv"
+github_repo: "hk6626/arxiv_weather_ai_checker"
 
 # 利用するGeminiモデル
 gemini_model: "gemini-3.1-flash-lite-preview"
