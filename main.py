@@ -137,7 +137,7 @@ def main():
 
     # Initialize APIs
     # timeoutを設定して10分間ハングするのを防ぐ
-    client = genai.Client(api_key=gemini_api_key, http_options={'timeout': 60.0})
+    client = genai.Client(api_key=gemini_api_key, http_options={'timeout': 120000})
     auth = Auth.Token(github_token)
     g = Github(auth=auth)
     
